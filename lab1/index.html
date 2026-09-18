@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабараторна робота №1.2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Note De Parfum</h1>
+            <p>Кросплатформний застосунок для каталогу елітної парфумерії</p>
+        </div>
+    </header>
+
+    <main class="container main">
+        <section class="card">
+            <h2>Про застосунок</h2>
+            <p>
+                Note De Parfum — це сучасний кросплатформний каталог та довідник парфумерних нот, який працює у браузері на будь-яких пристроях: комп'ютерах, планшетах і смартфонах.
+            </p>
+            <p>
+                Для створення інтерфейсу використано HTML і CSS, а для взаємодії з користувачем — JavaScript.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Основні функції</h2>
+            <ul class="features-list">
+                <li>Перегляд каталогу парфумерних нот та ароматів</li>
+                <li>Швидкий пошук та фільтрація парфумів за нотами</li>
+                <li>Додавання обраних ароматів до списку улюблених</li>
+                <li>Видалення ароматів із власного списку</li>
+                <li>Перегляд детальної інформації про кожен парфум</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Оцінити аромат</h2>
+            <div class="form-row-top">
+                <input type="text" id="userNameInput" class="review-input" placeholder="Ваше ім'я">
+                <select id="perfumeSelect" class="review-input">
+                    <option value="">Оберіть парфум...</option>
+                    <option value="Tom Ford Lost Cherry">Tom Ford Lost Cherry</option>
+                    <option value="Chanel Chance">Chanel Chance</option>
+                    <option value="YSL Libre">YSL Libre</option>
+                    <option value="Byredo Gypsy Water">Byredo Gypsy Water</option>
+                    <option value="Maison Margiela Replica">Maison Margiela Replica</option>
+                </select>
+            </div>
+            <div class="rating-group">
+                <span>Оцінка:</span>
+                <label><input type="radio" name="rating" value="1"> 1</label>
+                <label><input type="radio" name="rating" value="2"> 2</label>
+                <label><input type="radio" name="rating" value="3"> 3</label>
+                <label><input type="radio" name="rating" value="4"> 4</label>
+                <label><input type="radio" name="rating" value="5" checked> 5</label>
+            </div>
+            <textarea id="reviewTextInput" class="review-input review-textarea" placeholder="Напишіть декілька слів про ваші враження від аромату..."></textarea>
+            <button id="addReviewButton" class="button">Додати оцінку</button>
+            <p id="message" class="message"></p>
+        </section>
+
+        <section class="card">
+            <h2>Відгуки</h2>
+            <ul id="reviewList" class="review-list"></ul>
+        </section>
+
+        <section class="card">
+            <h2>Обраний стек технологій</h2>
+            <p>
+                Для розробки каталогу Note De Parfum використано WebView-підхід, оскільки застосунок реалізовано за допомогою вебтехнологій і він може запускатися у браузері або бути вбудованим у мобільний застосунок через WebView.
+            </p>
+
+            <table class="tech-table">
+                <thead>
+                <tr>
+                    <th>Компонент</th>
+                    <th>Технологія</th>
+                    <th>Призначення</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Структура сторінки</td>
+                    <td>HTML</td>
+                    <td>Семантична розмітка каталогу парфумів та блоків інформації</td>
+                </tr>
+                <tr>
+                    <td>Оформлення</td>
+                    <td>CSS</td>
+                    <td>Стилізація інтерфейсу, адаптивна верстка та візуальні ефекти</td>
+                </tr>
+                <tr>
+                    <td>Логіка та інтерактивність</td>
+                    <td>JavaScript</td>
+                    <td>Обробка дій користувача, фільтрація нот та динамічний вивід</td>
+                </tr>
+                <tr>
+                    <td>Архітектурний підхід</td>
+                    <td>WebView</td>
+                    <td>Можливість запуску як вебсайту та вбудовування в мобільні застосунки</td>
+                </tr>
+                <tr>
+                    <td>Платформа запуску</td>
+                    <td>Браузер / WebView</td>
+                    <td>Кросплатформне виконання на ПК, смартфонах та планшетах</td>
+                </tr>
+                <tr>
+                    <td>Система контролю версій</td>
+                    <td>Git / GitHub</td>
+                    <td>Збереження історії розробки та публікація коду репозиторію</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Лабораторна робота 1.2: Основи кросплатформності</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
