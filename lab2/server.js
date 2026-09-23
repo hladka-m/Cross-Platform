@@ -5,7 +5,7 @@ import dotenv from "dotenv";//модуль для зчитування конф�
 import { connectDB } from "./services/db.js";
 import noteRoutes from "./routes/noteRoutes.js";
 
-dotenv.config();
+dotenv.config({ path: "./.env" });
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;

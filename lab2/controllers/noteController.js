@@ -24,7 +24,7 @@ export async function updateNote(req, res) {
     const note = await Note.findByIdAndUpdate(
         req.params.id,
         { title, content },
-        { new: true, runValidators: true }//повертає вже оновлений документ
+        { returnDocument: "after", runValidators: true }//повертає вже оновлений документ
         //повторно перевіряє нові дані на відповідність правилам Mongoose-схеми
     );
     if (!note) {

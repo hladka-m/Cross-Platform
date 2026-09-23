@@ -1,0 +1,22 @@
+### Отримати всі нотатки
+GET http://localhost:3000/api/notes
+### Отримати нотатку за id (підставте реальний id)
+GET http://localhost:3000/api/notes/6ab3e6ddcfe2bc909e5937b9
+### Створити нову нотатку
+POST http://localhost:3000/api/notes
+Content-Type: application/json
+
+{
+    "title": "Перша нотатка",
+    "content": "Створено через WebStorm HTTP Client"
+}
+### Оновити нотатку (підставте реальний id)
+PUT http://localhost:3000/api/notes/6ab3e6ddcfe2bc909e5937b9
+Content-Type: application/json
+
+{
+    "title": "Оновлений заголовок",
+    "content": "Оновлений текст нотатки"
+}
+### Видалити нотатку (підставте реальний id)
+DELETE http://localhost:3000/api/notes/6ab3e6ddcfe2bc909e5937b9
