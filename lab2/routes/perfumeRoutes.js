@@ -1,19 +1,19 @@
 import { Router } from "express";
 import {
-    getNotes,
-    getNoteById,
-    createNote,
-    updateNote,
-    deleteNote,
-} from "../controllers/noteController.js";
-import { validateNote } from "../middleware/validateNote.js";
+    getPerfumes,
+    getPerfumeById,
+    createPerfume,
+    updatePerfume,
+    deletePerfume,
+} from "../controllers/perfumeController.js";
+import { validatePerfume } from "../middleware/validatePerfume.js";
 
 const router = Router(); //екземпляр маршрутизатора, до якого прив'язуватимемо HTTP-методи та відповідні обробники
 
-router.get("/", getNotes);
-router.get("/:id", getNoteById);
-router.post("/", validateNote, createNote);
-router.put("/:id", validateNote, updateNote);
-router.delete("/:id", deleteNote);
+router.get("/", getPerfumes);
+router.get("/:id", getPerfumeById);
+router.post("/", validatePerfume, createPerfume);
+router.put("/:id", validatePerfume, updatePerfume);
+router.delete("/:id", deletePerfume);
 
 export default router;

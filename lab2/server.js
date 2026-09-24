@@ -3,7 +3,7 @@ import cors from "cors";//плагін для крос-доменних запи
 import dotenv from "dotenv";//модуль для зчитування конфігурації
 
 import { connectDB } from "./services/db.js";
-import noteRoutes from "./routes/noteRoutes.js";
+import perfumeRoutes from "./routes/perfumeRoutes.js";
 
 dotenv.config({ path: "./.env" });
 
@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
     res.send("Сервер працює!");
 });
 
-app.use("/api/notes", noteRoutes);
+app.use("/api/perfumes", perfumeRoutes);
 
 connectDB(process.env.MONGO_URI).catch((err) =>
     console.error("Помилка підключення до MongoDB:", err)

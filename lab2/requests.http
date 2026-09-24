@@ -1,22 +1,28 @@
 ### Отримати всі нотатки
-GET http://localhost:3000/api/notes
+GET http://localhost:3000/api/perfumes
 ### Отримати нотатку за id (підставте реальний id)
-GET http://localhost:3000/api/notes/6ab3e6ddcfe2bc909e5937b9
+GET http://localhost:3000/api/perfumes/6ab55839303ad4d88d80ce0f
 ### Створити нову нотатку
-POST http://localhost:3000/api/notes
+POST http://localhost:3000/api/perfumes
 Content-Type: application/json
 
 {
-    "title": "Перша нотатка",
-    "content": "Створено через WebStorm HTTP Client"
+    "name": "Chanel No. 5",
+    "brand": "Chanel",
+    "description": "Класичний квітково-альдегідний аромат",
+    "price": 4500,
+    "volume": 50
 }
 ### Оновити нотатку (підставте реальний id)
-PUT http://localhost:3000/api/notes/6ab3e6ddcfe2bc909e5937b9
+PUT http://localhost:3000/api/perfumes/6ab55839303ad4d88d80ce0f
 Content-Type: application/json
 
 {
-    "title": "Оновлений заголовок",
-    "content": "Оновлений текст нотатки"
+    "name": "Chanel No. 5 Red Edition",
+    "brand": "Chanel",
+    "description": "Оновлений класичний аромат у червоному флаконі",
+    "price": 5200,
+    "volume": 100
 }
 ### Видалити нотатку (підставте реальний id)
-DELETE http://localhost:3000/api/notes/6ab3e6ddcfe2bc909e5937b9
+DELETE http://localhost:3000/api/perfumes/6ab55839303ad4d88d80ce0f

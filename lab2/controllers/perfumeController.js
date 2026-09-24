@@ -1,42 +1,48 @@
-import Note from "../models/Note.js";
+import Perfume from "../models/Perfume.js";
 
-export async function getNotes(req, res) { //повертає список усіх нотаток
-    const notes = await Note.find().sort({ createdAt: -1 }); //сортує у зворотному хронологічному порядку (найновіші зверху)
-    res.json(notes);
+export async function getPerfumes(req, res) { //Отримати всі парфуми
+    const perfumes = await Perfume.find();
+    res.json(perfumes);
 }
 
-export async function getNoteById(req, res) {
-    const note = await Note.findById(req.params.id);
-    if (!note) {
-        return res.status(404).json({ message: "Нотатку не знайдено" });
+export async function getPerfumeById(req, res) { 
+    const perfume = await Perfume.findById(req.params.id);
+    if (!perfume) {
+        return res.status(404).json({ message: "Парфум не знайдено!" });
     }
-    res.json(note);
+    res.json(perfume);
 }
 
-export async function createNote(req, res) {
-    const { title, content } = req.body;
-    const note = await Note.create({ title, content });
-    res.status(201).json(note);
+export async function createPerfume(req, res) {
+    const { name, brand, description, price, volume } = req.body;
+    const perfume = await Perfume.create({
+        name,
+        brand,
+        description,
+        price,
+        volume,
+    });
+    res.status(201).json(perfume);
 }
 
-export async function updateNote(req, res) {
-    const { title, content } = req.body;
-    const note = await Note.findByIdAndUpdate(
+export async function updatePerfume(req, res) {
+    const { name, brand, description, price, volume } = req.body;
+    const perfume = await Perfume.findByIdAndUpdate(
         req.params.id,
-        { title, content },
+        { name, brand, description, price, volume },
         { returnDocument: "after", runValidators: true }//повертає вже оновлений документ
         //повторно перевіряє нові дані на відповідність правилам Mongoose-схеми
     );
-    if (!note) {
-        return res.status(404).json({ message: "Нотатку не знайдено" });
+    if (!perfume) {
+        return res.status(404).json({ message: "Парфум не знайдено..." });
     }
-    res.json(note);
+    res.json(perfume);
 }
 
-export async function deleteNote(req, res) {
-    const note = await Note.findByIdAndDelete(req.params.id);
-    if (!note) {
-        return res.status(404).json({ message: "Нотатку не знайдено" });
+export async function deletePerfume(req, res) {
+    const perfume = await Perfume.findByIdAndDelete(req.params.id);
+    if (!perfume) {
+        return res.status(404).json({ message: "Парфум не знайдено..." });
     }
-    res.json({ message: "Нотатку видалено" });
+    res.json({ message: "Парфум видалено." });
 }
