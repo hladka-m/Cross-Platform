@@ -1,7 +1,7 @@
 ### Отримати всі нотатки
 GET http://localhost:3000/api/perfumes
 ### Отримати нотатку за id (підставте реальний id)
-GET http://localhost:3000/api/perfumes/6ab55839303ad4d88d80ce0f
+GET http://localhost:3000/api/perfumes/6ab55b3cd242a29a73ddba62
 ### Створити нову нотатку
 POST http://localhost:3000/api/perfumes
 Content-Type: application/json
@@ -14,7 +14,7 @@ Content-Type: application/json
     "volume": 50
 }
 ### Оновити нотатку (підставте реальний id)
-PUT http://localhost:3000/api/perfumes/6ab55839303ad4d88d80ce0f
+PUT http://localhost:3000/api/perfumes/6ab55b3cd242a29a73ddba62
 Content-Type: application/json
 
 {
@@ -25,4 +25,4 @@ Content-Type: application/json
     "volume": 100
 }
 ### Видалити нотатку (підставте реальний id)
-DELETE http://localhost:3000/api/perfumes/6ab55839303ad4d88d80ce0f
+DELETE http://localhost:3000/api/perfumes/6ab55b3cd242a29a73ddba62
