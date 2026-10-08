@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+    --color-p: #B86F82;
+    --color-db: #594e4c;
+    --color-b: #977272;
+    --color-lb: #dec4c9;
+    --color-c: #f2e5e8;
+
+    --font-h: 'Kalnia', sans-serif;
+}
