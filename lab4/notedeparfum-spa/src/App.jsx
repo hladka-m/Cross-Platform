@@ -99,7 +99,7 @@ function App() {
                         className={
                             message.type === "error"
                                 ? "mb-4 font-bold text-rose-600"
-                                : "mb-4 font-bold text-p"
+                                : "mb-4 font-bold text-green-300"
                         }
                     >
                         {message.text}
