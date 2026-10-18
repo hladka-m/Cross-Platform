@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "notedeparfum-mobile",
+    "slug": "notedeparfum-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./images/assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./images/assets/android-icon-foreground.png",
+        "backgroundImage": "./images/assets/android-icon-background.png",
+        "monochromeImage": "./images/assets/android-icon-monochrome.png"
+      }
+    },
+    "web": {
+      "favicon": "./images/assets/favicon.png"
+    }
+  }
+}
