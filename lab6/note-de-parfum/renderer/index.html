@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&display=swap" rel="stylesheet">
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com"
+        />
+        <title>Note de Parfum Desktop</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <h1>Note de Parfum Desktop</h1>
+            <p>Десктопна версія каталогу парфумів</p>
+        </header>
+
+        <main class="container">
+            <section class="card">
+                <h2>Додати новий парфум</h2>
+                <div class="form-row">
+                    <input type="text" id="perfumeNameInput" class="perfume-input" placeholder="Назва парфуму" />
+                    <input type="text" id="perfumeBrandInput" class="perfume-input" placeholder="Бренд" />
+                </div>
+                <div class="form-group">
+                    <label>Категорія:</label>
+                    <div class="radio-group">
+                        <label class="radio-button">
+                            <input type="radio" name="gender" value="Жіночі" checked />
+                            <span>Жіночі</span>
+                        </label>
+                        <label class="radio-button">
+                            <input type="radio" name="gender" value="Чоловічі" />
+                            <span>Чоловічі</span>
+                        </label>
+                        <label class="radio-button">
+                            <input type="radio" name="gender" value="Унісекс" />
+                            <span>Унісекс</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Об'єм (мл):</label>
+                    <div class="radio-group">
+                        <label class="radio-button">
+                            <input type="radio" name="volume" value="30 мл" />
+                            <span>30 мл</span>
+                        </label>
+                        <label class="radio-button">
+                            <input type="radio" name="volume" value="50 мл" checked />
+                            <span>50 мл</span>
+                        </label>
+                        <label class="radio-button">
+                            <input type="radio" name="volume" value="100 мл" />
+                            <span>100 мл</span>
+                        </label>
+                    </div>
+                </div>
+                <input type="number" id="perfumePriceInput" class="perfume-input" placeholder="Ціна (грн)" />
+                <button id="addPerfumeButton" class="button">Додати до каталогу</button>
+                <p id="message" class="message"></p>
+            </section>
+
+            <section class="card">
+                <h2>Список парфумів</h2>
+                <ul id="perfumesList" class="perfumes-list"></ul>
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
