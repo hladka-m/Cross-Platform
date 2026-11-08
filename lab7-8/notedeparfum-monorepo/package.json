@@ -1,0 +1,19 @@
+{
+  "name": "notedeparfum-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Монорепозиторій Note de Parfum: спільне ядро та клієнти (веб, десктоп)",
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "npm test --workspaces --if-present",
+    "start:web": "npm start -w smart-notes-web",
+    "start:desktop": "npm start -w smart-notes-monorepo-desktop"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
