@@ -9,8 +9,8 @@
   ],
   "scripts": {
     "test": "npm test --workspaces --if-present",
-    "start:web": "npm start -w smart-notes-web",
-    "start:desktop": "npm start -w smart-notes-monorepo-desktop"
+    "start:web": "npm start -w notedeparfum-web",
+    "start:desktop": "npm start -w notedeparfum-monorepo-desktop"
   },
   "keywords": [],
   "author": "",

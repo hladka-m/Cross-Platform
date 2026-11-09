@@ -1,0 +1,14 @@
+{
+    "name": "notedeparfum-web",
+    "private": true,
+    "version": "1.0.0",
+    "description": "Веб-клієнт Note de Parfum: спільне ядро + адаптер localStorage",
+    "type": "module",
+    "scripts": {
+        "start": "node server.js",
+        "test": "node --test"
+    },
+    "dependencies": {
+        "@notedeparfum/core": "*"
+    }
+}
