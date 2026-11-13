@@ -2,18 +2,18 @@
 
 ## Технологічний стек і компетентності
 
-Нижче наведено зведений технологічний стек проєкту з прив'язкою до відповідних компонентів монорепозиторію:
-
 | Рівень архітектури | Технології у проєкті | Посилання на теку / пакет | Що саме реалізовано |
 | :--- | :--- | :--- | :--- |
 | **Рівень 1 — Платформи** | Веббраузер, ОС Windows / macOS / Linux | [Корінь репозиторію](.) | Визначення середовищ виконання для вебклієнта та десктопного додатка |
-| **Рівень 2 — Клієнтські технології** | HTML5, CSS3, JavaScript (ES Modules), Electron, `importmap` | [`packages/web`](./packages/web) / [`packages/desktop`](./packages/desktop) | Інтерфейси користувача, форми додавання та пошуку для веб і десктопа |
-| **Рівень 3 — Спільний код** | `@notedeparfum/core`, `npm workspaces`, Dependency Injection | [`packages/core`](./packages/core) | Платформно-незалежна бізнес-логіка, валідація, утиліти та адаптери сховищ |
-| **Рівень 4 — Сервер і API** | Node.js (`node:http`), IPC (`ipcMain`, `ipcRenderer`, `preload.cjs`) | [`packages/web`](./packages/web) / [`packages/desktop`](./packages/desktop) | Локальний статичний сервер та безпечний міст обміну повідомленнями в Electron |
-| **Рівень 5 — База даних** | `localStorage`, локальний JSON-файл (`perfumes.json`) | [`packages/web`](./packages/web) / [`packages/desktop`](./packages/desktop) | Постійне збереження даних окремо для кожної платформи |
+| **Рівень 2 — Клієнтські технології** | HTML5, CSS3, JavaScript (ES Modules), Electron, `importmap` | [`packages/web`](./notedeparfum-monorepo/packages/web) / [`packages/desktop`](./notedeparfum-monorepo/packages/desktop) | Інтерфейси користувача, форми додавання та пошуку для веб і десктопа |
+| **Рівень 3 — Спільний код** | `@notedeparfum/core`, `npm workspaces`, Dependency Injection | [`packages/core`](./notedeparfum-monorepo/packages/core) | Платформно-незалежна бізнес-логіка, валідація, утиліти та адаптери сховищ |
+| **Рівень 4 — Сервер і API** | Node.js (`node:http`), IPC (`ipcMain`, `ipcRenderer`, `preload.cjs`) | [`packages/web`](./notedeparfum-monorepo/packages/web) / [`packages/desktop`](./notedeparfum-monorepo/packages/desktop) | Локальний статичний сервер та безпечний міст обміну повідомленнями в Electron |
+| **Рівень 5 — База даних** | `localStorage`, локальний JSON-файл (`perfumes.json`) | [`packages/web`](./notedeparfum-monorepo/packages/web) / [`packages/desktop`](./notedeparfum-monorepo/packages/desktop) | Постійне збереження даних окремо для кожної платформи |
+
+---
 
 ### Підсумок компетентностей
-У результаті розробки проєкта набуто навичок:
+У результаті розробки проєкту набуто навичок:
 - проєктування та побудови монорепозиторіїв за допомогою `npm workspaces`;
 - відокремлення платформно-незалежної бізнес-логіки в ізольоване спільне ядро;
 - реалізації патерну Dependency Injection та платформних адаптерів;
